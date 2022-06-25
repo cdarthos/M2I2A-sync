@@ -2,7 +2,7 @@ package buffer_3_7;
 
 public class Buffer {
     protected final int max;
-    protected final Object data[];
+    protected final Object[] data;
 
     protected int tete = 0;
     protected int queue = 0;
@@ -15,6 +15,7 @@ public class Buffer {
 
     public synchronized void put ( Object item) {
         while (count == max) {
+            System.out.println("count = " + count);
             try {
                 wait();
             }
@@ -31,6 +32,7 @@ public class Buffer {
 
     public synchronized Object get(){
         while (count == 0){
+            System.out.println("count = " + count);
             try{
                 wait();
             }
