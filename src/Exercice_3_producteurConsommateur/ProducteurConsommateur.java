@@ -1,4 +1,4 @@
-package buffer_3_7;
+package Exercice_3_producteurConsommateur;
 
 public class ProducteurConsommateur {
     static Buffer buffer = new Buffer(40);
